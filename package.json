@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/mocha server/spec",
-    "start": "npm run doc && cd ./client && npm i && npm run build && cd .. && ./node_modules/.bin/nodemon server/server.js",
+    "start": "cd ./client && npm i && npm run build && cd .. && ./node_modules/.bin/nodemon server/server.js",
     "doc": "./node_modules/.bin/apidoc -i server/routes -o docs/api & ./node_modules/.bin/jsdoc -c ./jsdocsConfig.json"
   },
   "apidoc": {
@@ -56,6 +56,7 @@
     "morgan": "^1.7.0",
     "node": "0.0.0",
     "nodemon": "^1.11.0",
+    "npm": "^4.0.3",
     "passport": "^0.3.2",
     "passport-jwt": "^2.1.0",
     "passport-local": "^1.0.0",
