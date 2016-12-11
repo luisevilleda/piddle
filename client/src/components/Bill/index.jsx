@@ -8,6 +8,7 @@ import BillItemList from './../BillItemList';
 import DescriptionField from './../DescriptionField';
 import TaxField from './../TaxField';
 import TipField from './../TipField';
+import AuthButtons from './../AuthButtons';
 
 /**
  * @class Bill
@@ -574,7 +575,10 @@ class Bill extends React.Component {
     return (
       <div className="Bill">
         {this.state.error &&
-          <p>{this.state.error.message}</p>
+          <div>
+            <p>{this.state.error.message}</p>
+            <AuthButtons />
+          </div>
         }
         {!this.state.error &&
           <div>
